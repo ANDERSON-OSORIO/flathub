@@ -1,6 +1,6 @@
 app-id: com.victumapp.pos
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 command: victumpos
 
@@ -8,13 +8,10 @@ finish-args:
   - --share=ipc
   - --share=network
   - --socket=x11
-  - --socket=wayland
   - --socket=pulseaudio
   - --device=dri
-  - --filesystem=home
   - --filesystem=/run/cups:ro
   - --talk-name=org.freedesktop.Notifications
-  - --talk-name=org.freedesktop.portal.Desktop
   - --talk-name=org.freedesktop.GeoClue2
   - --system-talk-name=org.freedesktop.Avahi
   - --env=ELECTRON_DISABLE_SECURITY_WARNINGS=true
@@ -35,9 +32,33 @@ modules:
         path: com.victumapp.pos.desktop
       - type: file
         path: com.victumapp.pos.metainfo.xml
-      - type: dir
-        path: icons
-        dest: icons
+      - type: file
+        path: icons/16x16.png
+        dest-filename: icons/16x16.png
+      - type: file
+        path: icons/24x24.png
+        dest-filename: icons/24x24.png
+      - type: file
+        path: icons/32x32.png
+        dest-filename: icons/32x32.png
+      - type: file
+        path: icons/48x48.png
+        dest-filename: icons/48x48.png
+      - type: file
+        path: icons/64x64.png
+        dest-filename: icons/64x64.png
+      - type: file
+        path: icons/128x128.png
+        dest-filename: icons/128x128.png
+      - type: file
+        path: icons/256x256.png
+        dest-filename: icons/256x256.png
+      - type: file
+        path: icons/512x512.png
+        dest-filename: icons/512x512.png
+      - type: file
+        path: icons/1024x1024.png
+        dest-filename: icons/1024x1024.png
     build-commands:
       - install -d /app/VictumPOS /app/bin
       - find . -mindepth 1 -maxdepth 1 ! -name victumpos-flatpak-launcher ! -name com.victumapp.pos.desktop ! -name com.victumapp.pos.metainfo.xml ! -name icons -exec cp -a {} /app/VictumPOS/ \;
