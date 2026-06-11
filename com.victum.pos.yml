@@ -26,7 +26,7 @@ modules:
     buildsystem: simple
     sources:
       - type: archive
-        url: https://github.com/ANDERSON-OSORIO/VictumPOS-Linux-Releases/releases/download/v1.0.3/VictumPOS-Linux-1.0.3-x64.tar.gz
+        url: https://pos.victumapp.com/downloads/VictumPOS-Linux-1.0.3-x64.tar.gz
         sha256: 681a24348d64cc0e514b9c5a04d7d82e4c905854532a3be68361b47536fc0106
 
       - type: file

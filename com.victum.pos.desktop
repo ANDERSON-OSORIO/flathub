@@ -1,12 +1,13 @@
 [Desktop Entry]
 Name=VictumPOS
-GenericName=Terminal POS
-Comment=Terminal POS de escritorio
+GenericName=Point-of-sale terminal
+Comment=Desktop point-of-sale terminal for the Victum platform
 Exec=victumpos %U
 Terminal=false
 Type=Application
 Icon=com.victum.pos
 StartupWMClass=VictumPOS
 StartupNotify=true
-Categories=Office;
+Categories=Office;Finance;
+Keywords=POS;Point of Sale;Retail;Printing;
 X-Flatpak=com.victum.pos
